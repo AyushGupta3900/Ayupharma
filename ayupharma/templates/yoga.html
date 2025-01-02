@@ -1,0 +1,281 @@
+{% extends "layout.html" %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style9.css')}}">
+{% endblock style%}
+{%block content%}
+<!-- Browse Yoga Section -->
+<div class="browse-yoga-section load-animate-2">
+    <div class="browse-yoga-container flex">
+        <div class="asanas-container yoga-button yoga-button-0 flex">
+            Surya Namaskar
+        </div>
+        <div class="asanas-container yoga-button yoga-button-1 flex">
+            Tadasana
+        </div>
+        <div class="asanas-container yoga-button yoga-button-2 flex">
+            Adho Mukha Svanasana
+        </div>
+        <div class="asanas-container yoga-button yoga-button-3 flex">
+            Uttanasana
+        </div>
+        <div class="asanas-container yoga-button yoga-button-4 flex">
+            Dhanurasana
+        </div>
+        <div class="asanas-container yoga-button yoga-button-5 flex">
+            Trikonasana
+        </div>
+        <div class="asanas-container yoga-button yoga-button-6 flex">
+            Savasana
+        </div>
+        <div class="asanas-container yoga-button yoga-button-7 flex">
+            Ardha Chandrasana
+        </div>
+        <div class="asanas-container yoga-button yoga-button-8 flex">
+            Paschimottanasana
+        </div>
+        <div class="asanas-container yoga-button yoga-button-9 flex">
+            Bakasana
+        </div>
+        <div class="asanas-container yoga-button yoga-button-10 flex">
+            Matsyasana
+        </div>
+        <div class="asanas-container yoga-button yoga-button-11 flex">
+            Vasisthasana
+        </div>
+    </div>
+</div>
+<script>
+    //All herbs data 
+    let asanas = [
+        `Surya Namaskar`,
+        `Tadasana`,
+        `Adho Mukha Svanasana `,
+        `Uttanasana`,
+        `Dhanurasana`,
+        `Trikonasana`,
+        `Savasana`,
+        `Ardha Chandrasana`,
+        `Paschimottanasana`,
+        `Bakasana`,
+        `Matsyasana`,
+        `Vasisthasana`
+
+    ]
+
+    let videos = [
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/0rJLF_qrd3k?si=doICRhRgKkalRWBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/ET_cKo1Ta1s?si=AX7fCAoplMm4O-Be" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/zK1cLctwBsk?si=6m1EwlVZbKZ01Z_m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/V3EAlKI4c9U?si=sPa1YiQ0EgS96iQn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/4P2mYcOGxbU?si=I_oMKuI44Kfc-PzB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/9iaEp4RHYEE?si=-Uh5BPXj9BSpgt7x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/ogaDPQ85508?si=hqne8AvJf6D4xaAz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/csErxVR7dpA?si=mwJcpGdfxvcicd1_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/T8sgVyF4Ux4?si=joEtik0-mTTCX5nb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/xcK_rQGk-mw?si=pjQWEzYz1s4-9KVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/V7V4TEfCx-s?si=qK6S944RKHqxy0nS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/dFCrqn0RzJA?si=HVEEsq9vbCzA3hze" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+    ]
+
+    let description = [
+        `Surya Namaskar, also known as Sun Salutation, is a revered practice deeply rooted in the ancient traditions of Ayurveda and yoga. This graceful sequence of twelve yoga postures, performed in a rhythmic manner, is a holistic approach to physical and mental well-being.
+
+    Physically, Surya Namaskar enhances flexibility by stretching various muscle groups and builds strength, particularly in the core, arms, and legs. It improves blood circulation, aiding in the elimination of toxins from the body and contributing to weight management. 
+    
+    Mentally, the meditative aspect of Surya Namaskar promotes relaxation, reduces stress, enhances mental clarity, concentration, and memory, fostering a peaceful and focused mindset while balancing emotions.
+    
+    Energetically, it stimulates and balances the body's energy centers (chakras), promoting overall vitality and well-being by enhancing the flow of prana (life force energy) throughout the body.
+    
+    On a spiritual level, Surya Namaskar is a sacred practice that connects the practitioner with the divine source and the sun, often considered a symbol of consciousness and spiritual awakening. It fosters gratitude for the universe and cultivates a deeper sense of appreciation for life's energies.
+    
+    Incorporating Surya Namaskar into your daily routine aligns with Ayurveda's principles by promoting balance in the body, mind, and spirit. Whether you seek physical strength, mental clarity, emotional balance, or a deeper spiritual connection, Surya Namaskar is a radiant path to total well-being, making it a valuable addition to your holistic wellness practices. Start your journey towards a healthier, more harmonious life by embracing this ancient practice today. The sun salutation can be a great way to start your day, as it awakens your body and prepares you for the challenges ahead. It is often recommended as a warm-up or a standalone practice for those looking to incorporate yoga into their daily routine. Surya Namaskar is a versatile practice that can be adapted to various skill levels by modifying the intensity and duration of each pose. The practice is not only physical but also spiritual, as it signifies the journey of the soul towards enlightenment. Regular practice of Surya Namaskar can contribute to enhanced physical health, mental peace, and a deeper connection to one's inner self.`,
+        `Tadasana, also known as Mountain Pose or Palm Tree Pose, is a basic standing yoga pose that helps to improve posture, balance, and concentration. It is a pose of stillness and awareness, and serves as a foundation for many other standing poses. The name Tadasana comes from the Sanskrit word tada, which means “mountain”, and asana, which means “pose” or “posture”. Tadasana strengthens the legs, feet, ankles, and abdominal muscles. It can reduce flat feet and relieve sciatica pain. To practice Tadasana, stand with your feet slightly apart and evenly distribute your weight on both feet. Inhale and raise your arms above your head, interlocking your fingers and turning your palms upward. Exhale and roll your shoulders back and down, opening your chest and aligning your spine. Relax your face and gaze at a fixed point in front of you. Hold the pose for a few breaths or as long as comfortable. Tadasana can be modified for beginners or people with knee problems by bending the knees slightly or placing a block between the thighs. Tadasana is also used as a starting and ending position for Sun Salutation sequences, as well as a resting pose between more challenging postures. Tadasana is a simple but powerful yoga pose that can bring many benefits to the body and mind.`,
+        `Adho Mukha Svanasana, also known as Downward-Facing Dog Pose, is a common yoga pose that involves bending forward and lifting the hips and legs to form an inverted V-shape with the body. The name comes from the Sanskrit words adho (downward), mukha (face), and svana (dog), as the pose resembles a dog stretching its body1. Adho Mukha Svanasana is often practiced as part of a flowing sequence of poses, especially Surya Namaskar, the Salute to the Sun1. It is also used as a starting and ending position for many other poses, as well as a resting pose between more challenging ones2.
+
+    Adho Mukha Svanasana has many benefits for the body and mind. It strengthens the core, arms, shoulders, legs, feet, and ankles, and tones the muscles of the abdomen, back, chest, and calves324. It lengthens the spine and improves posture and alignment354. It increases blood circulation to the brain and relieves headache, insomnia, and fatigue24. It also calms the nervous system and helps reduce stress and anxiety54.
+    
+    To practice Adho Mukha Svanasana, start on your hands and knees on the floor, with your hands under your shoulders and your knees under your hips. Curl your toes under and exhale as you lift your hips and straighten your legs and arms. Press your palms firmly into the ground and spread your fingers wide. Rotate your shoulders outward and draw your shoulder blades down your back. Keep your neck relaxed and your ears in line with your upper arms. Look at your navel or between your feet. Keep your heels close to the ground or touching it if possible. Hold the pose for a few breaths or as long as comfortable. To release, bend your knees and lower your hips to the floor`,
+        `Uttanasana, also known as the Forward Bend or Standing Forward Fold, is a foundational yoga pose with a multitude of physical and mental benefits. The name "Uttanasana" is derived from Sanskrit, where "Uttana" means intense stretch, and "Asana" signifies pose or posture. This pose is a staple in yoga sequences and is frequently incorporated into the sun salutation series.
+
+    To practice Uttanasana, start in Tadasana (Mountain Pose) with feet hip-width apart and arms resting at your sides. Inhale deeply, elongating your spine. Upon exhaling, hinge at the hips and bend forward from your waist while maintaining a straight back. Allow your hands to reach toward the floor, or if your flexibility permits, grasp your ankles, shins, or thighs. Keep your knees straight, though if your hamstrings are tight, slight bending is acceptable to prevent strain. Relax your neck, letting your head hang freely, and consider swaying gently from side to side to alleviate lower back tension.
+    
+    Uttanasana offers several advantages, including hamstring stretching, which enhances flexibility and alleviates tension in the back of the legs. Additionally, it provides relief from lower back discomfort by stretching and strengthening lower back muscles, aiding in better posture. Furthermore, this forward bend calms the mind and promotes mental relaxation, making it a valuable addition to any yoga practice.`,
+
+        `Dhanurasana, commonly known as Bow Pose in yoga, is a dynamic and invigorating posture that takes its name from the shape it resembles – a bow. This asana is highly regarded for its ability to enhance both physical strength and flexibility, and it brings various benefits to the practitioner.
+
+    To perform Dhanurasana, begin by lying on your stomach, legs extended, and arms resting alongside your body. Follow these steps:
+    
+    Start by bending your knees and drawing your heels toward your buttocks.
+    
+    Reach your arms back and grasp your ankles with your hands. If reaching your ankles is challenging, you can use a yoga strap looped around your ankles to hold onto.
+    
+    Inhale deeply, and as you exhale, lift your chest, head, and thighs off the ground. Keep your gaze forward to maintain a steady balance.
+    
+    Engage your leg muscles to raise your thighs even higher while continuing to pull your ankles upward, creating a graceful arch in your back.
+    
+    Hold this pose for a few deep breaths, feeling the stretch across your chest, shoulders, and front of the body. Maintain steady breathing throughout.
+    
+    When you are ready to release, exhale gently and lower your chest, head, and thighs back to the ground.
+    
+    Dhanurasana offers a myriad of benefits, including improved spinal flexibility, strengthened back and abdominal muscles, and enhanced digestion. This pose also opens up the chest and shoulders, promoting better posture and lung capacity. Additionally, Dhanurasana can be invigorating, helping to boost energy and alleviate stress when practiced regularly.`,
+        `Trikonasana, or Triangle Pose, is a fundamental yoga asana renowned for its combination of strength, balance, and flexibility elements. Its name originates from the Sanskrit words "tri," meaning three, and "kona," meaning angle, which aptly describes the triangular shape formed by the body in this pose. Trikonasana is a widely practiced posture in yoga due to its numerous physical and mental benefits.
+
+    To execute Trikonasana, start in a standing position with your feet approximately 3 to 4 feet apart. One foot should point forward while the other is turned outward at a 90-degree angle. Extend your arms out to the sides, parallel to the ground, with palms facing down. Inhale deeply, elongating your spine, and then exhale as you hinge at your hip to the side, reaching your front hand down toward your front ankle or shin. Simultaneously, your other arm points upward, forming a straight line with your extended leg.
+    
+    Throughout the pose, maintain an open chest and choose whether to direct your gaze toward your top hand or forward, depending on your comfort and balance. Keep your legs straight and strong, and ensure your torso remains in line with your extended leg. Hold Trikonasana for a few breaths, focusing on steady and even breathing. To exit the pose, inhale, engage your core, and slowly raise your torso back to an upright position. You can repeat the pose on the other side by switching the position of your feet and extending the opposite arm downward.
+    
+    Trikonasana offers several benefits, including the strengthening of leg muscles, hips, and the side of the torso. It also enhances balance and flexibility while promoting good posture and alignment. Furthermore, this pose can aid in relieving stress and enhancing overall mental and physical well-being when regularly incorporated into your yoga practice.`,
+        `Savasana, also known as Corpse Pose, is a foundational and deeply rejuvenating yoga asana. Despite its apparent simplicity, it carries profound significance in the world of yoga as it provides a unique opportunity for physical, mental, and spiritual relaxation. To practice Savasana, one lies flat on their back with legs comfortably extended and arms resting alongside the body, palms facing upward. Closing the eyes gently, attention turns inward to the breath. Deep, mindful breaths help release any lingering tension, setting the stage for a profound sense of letting go.
+
+    In Savasana, the entire body is systematically relaxed, starting from the toes and progressing upward to the crown of the head. Muscles soften, and all residual tension dissipates, allowing the weight of the body to sink into the supportive earth beneath. The breath flows naturally without manipulation, and the rise and fall of the chest and abdomen are observed without judgment or interference. This asana encourages mental stillness, facilitating a detachment from the fluctuations of the mind. If thoughts wander, gentle redirection toward the breath or bodily sensations is practiced.
+    
+    This meditative and restorative pose is typically held for a minimum of 5-10 minutes, or longer if time allows. Savasana offers numerous benefits, including stress reduction by calming the nervous system, improved concentration and mindfulness, physical recovery, and enhanced sleep quality. It serves as the culmination of a yoga session, allowing practitioners to integrate the physical and mental benefits of their practice while promoting a deep sense of relaxation and inner peace. Savasana is a precious moment of surrender and self-care, inviting a profound sense of renewal and tranquility.`,
+        `Ardha Chandrasana, also known as Half Moon Pose, is a captivating yoga asana that marries strength, flexibility, and mindfulness. The name "Ardha Chandrasana" derives from the Sanskrit words "Ardha" for half and "Chandra" for moon, fittingly representing the pose's crescent moon-like shape. This asana is frequently incorporated into yoga sequences to enhance balance and stability while delivering an array of physical and mental benefits.
+
+    To execute Ardha Chandrasana, commence in Tadasana, or Mountain Pose, with your feet positioned hip-width apart. Transition your weight onto your left foot while engaging your core muscles. Gradually elevate your right foot off the ground, bending your right knee as you draw it towards your chest. Extend your right leg straight back, parallel to the ground, while simultaneously tilting your upper body forward at the hips, creating a single straight line from your right heel to the crown of your head. In concert with this movement, extend your left arm downward to touch the floor or a yoga block placed outside your left foot.
+    
+    Ardha Chandrasana offers several advantages, including enhanced balance, improved leg strength, and increased hip flexibility. The pose also cultivates mental focus and concentration as it demands mindfulness and control to maintain stability. Moreover, it opens and strengthens the entire body, making it a valuable addition to any yoga practice, particularly for those seeking a combination of physical and mental wellness.`,
+
+        `Paschimottanasana, often referred to as Seated Forward Bend or simply Forward Fold, is a fundamental yoga pose that involves a deep stretch of the entire posterior chain of the body. The name "Paschimottanasana" is derived from Sanskrit, where "Paschima" means west or back, "Uttana" means intense stretch, and "Asana" denotes posture. This asana is typically practiced as part of the seated postures sequence and offers numerous physical and mental benefits.
+
+    To perform Paschimottanasana:
+    
+    Begin by sitting on the floor with your legs extended straight in front of you. Ensure that your spine is upright, and your feet are flexed, toes pointing toward the ceiling.
+    
+    Inhale deeply to lengthen your spine, and as you exhale, hinge at your hips to bend forward from your waist. Keep your back straight as you fold forward.
+    
+    Reach your hands toward your feet, holding onto your shins, ankles, or feet, depending on your flexibility. If you can't reach your feet, you can use a yoga strap looped around your feet to assist in the stretch.
+    
+    Gently relax your neck and allow your head to hang down toward your knees.
+    
+    Hold the stretch for several breaths, gradually deepening the fold as your flexibility allows.
+    
+    Paschimottanasana offers several benefits, including a deep stretch for the hamstrings, lower back, and spine. It helps relieve tension in the back and can be therapeutic for individuals with mild sciatica. Regular practice of this asana can also improve digestion and reduce stress and anxiety, making it a valuable addition to a well-rounded yoga practice.`,
+        `Bakasana, commonly known as Crow Pose, is an invigorating arm balance in yoga that challenges both physical strength and mental focus. The name "Bakasana" is derived from Sanskrit, where "Baka" means crane and "Asana" denotes pose or posture, aptly reflecting the shape the body takes in this pose, resembling a perched crane.
+
+    To practice Bakasana:
+    
+    Start in a squatting position with your feet hip-width apart. Place your hands on the mat shoulder-width apart, fingers spread wide, and palms firmly grounded.
+    
+    Shift your weight forward onto your hands, lifting your hips slightly and bending your elbows.
+    
+    Position your knees on the back of your upper arms, as high up as possible, near your armpits.
+    
+    Engage your core muscles and slowly lift your feet off the ground, balancing your entire body on your hands.
+    
+    Focus on your breath, maintain a steady gaze forward, and keep your back rounded and strong.
+    
+    Hold the pose for as long as comfortable, aiming to gradually extend your time in Crow Pose as your strength and balance improve.
+    
+    Bakasana offers numerous benefits, including enhanced arm and wrist strength, improved core stability, and increased concentration. This pose also encourages a sense of self-confidence and mental resilience as you learn to balance and soar gracefully like a crane in flight. As with any yoga pose, it's important to practice Bakasana with caution, especially if you're a beginner, and consider seeking guidance from a certified yoga instructor to ensure proper alignment and safety.`,
+
+
+        `Matsyasana, also known as Fish Pose, is a rejuvenating backbend in yoga that opens up the chest and throat while stretching the neck and spine. The name "Matsyasana" is derived from Sanskrit, where "Matsya" means fish and "Asana" signifies pose or posture, symbolizing the shape the body takes on in this pose, resembling a fish arching upward.
+
+To practice Matsyasana:
+
+Begin by lying flat on your back with your legs extended and your arms resting alongside your body, palms facing down.
+
+Press your forearms and elbows into the mat, lifting your chest and upper torso off the ground. Arch your back and tilt your head backward so that the crown of your head touches the floor.
+
+Your weight should be supported by your forearms and head, while your chest is thrust upward, creating a gentle backbend.
+
+If comfortable, you can lift your heart even higher by bringing your hands to rest on your thighs or allowing your palms to touch in a lotus mudra position.
+
+Hold Matsyasana for several breaths, ensuring that your neck is comfortable and relaxed.
+
+This asana offers a range of benefits, including improved posture, increased lung capacity, and relief from tension in the neck and shoulders. It also stimulates the thyroid gland, helping to regulate metabolism and energize the body. As with any yoga pose, it's important to practice Matsyasana mindfully, especially if you have a history of neck or back issues, and consider using props or seeking guidance from a qualified yoga instructor to ensure proper alignment and safety.`,
+
+        `Vasisthasana, commonly known as Side Plank Pose, is a challenging and empowering yoga posture that combines strength, balance, and focus. Named after the sage Vasistha, this asana demands a strong core and upper body while promoting overall stability and equilibrium. To practice Vasisthasana, begin in a plank position with your wrists aligned beneath your shoulders and your body forming a straight line from head to heels. Gradually shift your weight onto your right hand and the outer edge of your right foot, stacking your left foot on top of the right. As you raise your left arm, extending it toward the ceiling, your body assumes a lateral line, from the soles of your feet to the crown of your head. Engaging your core muscles to maintain hip alignment, you hold this challenging position, focusing your gaze straight ahead or upward to your raised hand. Vasisthasana fosters benefits such as enhanced arm and wrist strength, heightened core stability, and improved concentration. By mastering this asana, practitioners not only develop physical prowess but also a deeper connection between mind and body. As with all yoga poses, it is advisable to approach Vasisthasana with caution, especially for beginners, and consider seeking guidance from a qualified yoga instructor to ensure correct alignment and safety during practice.`
+
+    ]
+
+
+
+
+    function generateHTML(asanName, step1, iframe) {
+        let webHTML =
+
+            `<div class="head ">
+            <div class="blur-image-d">
+                <h1 class="main-heading">${asanName}</h1>
+            </div>
+        </div>
+        <div class="grid-layout">
+            <main>
+                <section class="sections" id="history">
+                    <div class="box-container">
+                        <h2  class="sub-heading">
+                            Exploring the Practice of Yoga
+                        
+                        </h2>
+                        <div class=video>
+                            ${iframe}
+                        </div>
+                        <div class="para">
+                          ${step1}
+                        </div>
+                       
+                    </div>
+    
+                </section>
+            </main>
+            <aside >
+                <h2 class="aside-sub-heading">
+                    DO YOU KNOW?
+                </h2>
+                <div class="facts-box">
+                    <div class="facts">
+                        <img src="../static/resources/asideImg1.jpg" alt="">
+                        <div class="fact-text">
+                            <div>
+                            <i class="fa-solid fa-quote-left quote"></i>
+                          Ayurveda, the ancient healing system, predates even the pyramids of Egypt, with a history spanning over 5,000 remarkable years.
+                       <i class="fa-solid fa-quote-right quote"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="facts">
+                <img src="../static/resources/AsideImg2.jpg" alt="">
+                <div class="fact-text">
+                    <div>
+                           <i class="fa-solid fa-quote-left quote"></i>
+                        Ayurveda's doshas (Vata, Pitta, Kapha) are like unique blueprints for individuals, each holding the secret to their distinctive well-being.
+                        <i class="fa-solid fa-quote-right quote"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="facts">
+                <img src="../static/resources/AsideImg3.png" alt="">
+                <div class="fact-text">
+                    <div>
+                            <i class="fa-solid fa-quote-left quote"></i>
+                            Ayurveda emphasizes the importance of balance in diet and lifestyle to achieve optimal health and wellness.
+                            <i class="fa-solid fa-quote-right quote"></i>
+                        </div>
+                    </div>
+              </div>
+            </div>
+            </aside>
+        </div>
+    `
+
+        return webHTML
+    }
+
+    let asan = document.getElementsByClassName("asanas-container")
+
+
+    for (let i = 0; i < 12; i++) {
+        asan[i].addEventListener('click', () => {
+            let asanName = asanas[i]
+            let step1 = description[i]
+            let videoFrame = videos[i]
+            let pageHTML = generateHTML(asanName, step1, videoFrame)
+            localStorage.setItem("textvalue", pageHTML)
+            window.location.href = "{{ url_for('yogadetails') }}"
+
+        })
+    }
+</script>
+{%endblock content%}

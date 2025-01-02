@@ -1,0 +1,21 @@
+{%extends "layout.html"%}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='output.css')}}">
+{% endblock style %}
+{%block content%}   
+    <div class="output-container container">
+        <div class="herb-ouput">
+            <p>You have symptoms of <b>"{{answer}}"</b></p>
+            <h2>HERB RECOMMENDATION</h2>
+            {%for herb in herbs%}
+            <p>{{herb}}</p>
+            {%endfor%}
+        </div>
+        <div class="yoga-output">
+            <h2>YOGA RECCOMENDATION</h2>
+            {%for yoga in yogas%}
+            <p>{{yoga}}</p>
+            {%endfor%}
+        </div>
+    </div>
+{%endblock content%}

@@ -1,0 +1,38 @@
+{%extends "layout.html"%}
+{%block style%}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='search.css')}}">
+{%endblock style%}
+{%block content%}
+<section class="main-search-section">
+  <div class="blur-image-3">
+    <div class="main-search-container container load-animate-2">
+        <div class="main-search-box">
+            <div class="search-tag-line">
+                <h1>Discover Ayurveda:<br /> Enter Your Symptom for Remedy</h1>
+                <p>
+                    Experience personalized Ayurvedic guidance through our platform.
+                    Utilize our virtual diagnosis feature to receive tailored herbal
+                    recommendations, enhancing your well-being with authentic and
+                    effective Ayurvedic solutions. Your holistic health starts here
+                </p>
+            </div>
+            <form method="POST" class="flex search-form">
+                {{ form.hidden_tag() }}
+    
+                <i class="fa-solid fa-magnifying-glass search-icon main-search-icon"></i>
+                {{form.search(class = "main-search-input",placeholder="Type Any One Symptom ex.fever,headache,etc",list="main-search-input")}}
+                <datalist id="main-search-input">
+                    {% for option in options %}
+                        <option value="{{option}}">
+                    {%endfor%}
+                    {% for disease in diseases %}
+                        <option value="{{diseasea}}">
+                    {%endfor%}
+                </datalist>
+                {{form.submit(class = "search-btn primary-button")}}
+            </form>
+        </div>
+    </div>
+  </div>
+</section>
+{%endblock content%}

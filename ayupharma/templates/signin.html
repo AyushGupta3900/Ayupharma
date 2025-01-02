@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='form.css')}}">
+{% endblock style%}
+{%block content%}
+<div class="form-container wrapper">
+    <div class="form-logo"></div>
+    <div class="box1">
+        <h1>Sign in</h1>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            
+            {{form.email.label(class = "form-control-label")}}<br/>
+            {{form.email(class = "form-control" ,placeholder="abc123@gmail.com")}}
+
+            {{form.password.label(class = "form-control-label")}}<br/>
+            {{form.password(class = "form-control" ,placeholder="At least 8 characters")}}
+
+            {{form.remember(class="form-check-input")}}
+            {{form.remember.label(class="form-control-label")}}
+            <br>
+            <br>
+            {{form.submit(class = "btn1")}}
+        </form>
+        <div id="tnc">By continuing, you agree to AyuPharma's <span>Conditions of Use</span> and <span>Privacy
+                Notice</span>.</div>
+    </div>
+    <div id="new">--------- New to AyuPharma? ---------</div>
+    <div class="box2">
+        <a href="{{url_for('register')}}">
+            <button class="create">Create your AyuPharma Account</button>
+        </a>
+    </div>
+</div>
+{%endblock content%}

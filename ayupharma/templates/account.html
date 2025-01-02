@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+{%block style%}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='account.css')}}">
+{%endblock style%}
+{% block content %}
+<section class="account-section wrapper">
+    <div class="account-container">
+      <div class="account-info flex">
+        <img src="{{image_file}}" alt="" class="profile-image">
+      <div class="user-info">
+      <p class="account-heading"><span class="user-name">
+        {{ current_user.username }} 😎
+      </span> <br><span class="text-secondary gmail">
+        {{ current_user.email }} ✉️
+      </span></p>
+      </div>
+      <div class="png flex">
+        <img src="../static/resources/h6.png" alt="" class="png-image">
+        <img src="../static/resources/h8.png" alt="" class="png-image">
+      </div>
+      </div>
+
+      <div class="more-info">
+        <div class="health-cards">
+          <div class="health-card health-card-0 update-form ">
+            <div class="head-item flex">
+              <p class="health-card-head"><b>Update Profile</b></p>
+              <img src="../static/profile_pics/default.jpg" alt="" class="acc-img">
+              <!-- <img src="{{image_file}}" alt="" class="acc-img"> -->
+            </div>
+            <form method="POST" action="" enctype="multipart/form-data">
+              {{ form.hidden_tag() }}
+      
+              {{form.username.label(class = "form-control-label")}}<br />
+              {{form.username(class = "form-control",placeholder="First and last name", id="username")}}<i class="fa-solid fa-pen username-edit"></i><br />
+      
+              {{form.email.label(class = "form-control-label")}}<br />
+              {{form.email(class = "form-control" ,placeholder="abc123@gmail.com")}}<i class="fa-solid fa-pen email-edit"></i><br />
+      
+              {{form.picture.label(class="form-control-label")}}
+              {{form.picture(class="form-picture-btn")}}
+              <br>
+              {{form.submit(class = "update-btn")}}
+            </form>
+          </div>
+
+          <div class="health-card health-card-1">
+            <div class="head-item flex">
+            <p class="health-card-head"><b>BMI Card </b></p>
+            <img src="../static/resources/acc2.png" alt="" class="acc-img">
+            </div>
+            <label for="weight" class="form-control-label">Weight in kgs</label>
+            <div id="weight" contenteditable="true">
+              EDIT HERE
+            </div>
+            <label for="height"  class="form-control-label">Height in meters</label>
+            <div id="height" contenteditable="true">
+              EDIT HERE 
+            </div>
+            <label for="bmi"  class="form-control-label">Your BMI</label>
+            <div id="bmi">
+  
+            </div>
+            <div class="update-btn calculate-bmi-btn">
+              Calculate BMI
+            </div>
+        </div>
+
+        <div class="health-card health-card-2">
+          <div class="flex head-item">
+            <p class="health-card-head"><b>Medical History </b></p>
+            <img src="../static/resources/acc1.png" alt="" class="acc-img">
+          </div>
+          <form action="" method="POST" enctype="multipart/form-data">
+            {{ form1.hidden_tag() }}
+            <div class="disease disease-1">
+              <!-- <i class="fa-solid fa-capsules"></i> -->
+              <!-- {{ form1.disease_1.label(class="form-control-label") }} -->
+              {{form1.disease_1(class = "form-control",placeholder="Enter Disease")}}
+              <!-- <i class="fa-solid fa-stethoscope"></i> -->
+            </div>
+            <div class="disease disease-2">
+              <!-- <i class="fa-solid fa-capsules"></i> -->
+              <!-- {{ form1.disease_2.label(class="form-control-label") }} -->
+              {{form1.disease_2(class = "form-control",placeholder="Enter Disease")}}
+              <!-- <i class="fa-solid fa-stethoscope"></i> -->
+            </div>
+            <div class="disease disease-4">
+              <!-- <i class="fa-solid fa-capsules"></i> -->
+              <!-- {{ form1.disease_3.label(class="form-control-label") }} -->
+              {{form1.disease_3(class = "form-control",placeholder="Enter Disease")}}
+              <!-- <i class="fa-solid fa-stethoscope"></i> -->
+            </div>
+            {{form1.submit(class = "update-btn")}}
+          </form>
+        </div>
+        </div>
+      </div>
+
+    </div>
+</section>
+<script>
+  let  calculateBmiBtn = document.querySelector('.calculate-bmi-btn').addEventListener('click',()=>
+  {
+    let weight = document.querySelector('#weight').innerText;
+    let height = document.querySelector('#height').innerText;
+    let bmiBlock = document.querySelector('#bmi');
+    let bmi = Math.round(weight/(height*height))
+    if(bmi>=18.5 & bmi<25){
+      bmiBlock.style.color = 'green';
+      document.querySelector('#bmi').innerText = bmi+' You are normal!'+'😊';
+    }
+    else if(bmi<=18.5 & bmi>17){
+      bmiBlock.style.color = 'yellowgreen';
+      document.querySelector('#bmi').innerText = bmi+' You are slight thin!'+'😑';
+    }
+    else if(bmi<=17 & bmi>16){
+      bmiBlock.style.color = 'orange';
+      document.querySelector('#bmi').innerText = bmi+' You are moderately thin!'+'😥';
+    }
+    else if(bmi<=16){
+      bmiBlock.style.color = 'red';
+      document.querySelector('#bmi').innerText = bmi+' You are severely thin!'+'☠️';
+    }
+    else if(bmi>=25 & bmi<30){
+      bmiBlock.style.color = 'yellowgreen';
+      document.querySelector('#bmi').innerText = bmi+' Your are Overweight'+'😑';
+    }
+    else if(bmi>=30 & bmi<35){
+      bmiBlock.style.color = 'orange';
+      document.querySelector('#bmi').innerText = bmi+' Your are Obese-I'+'😥';
+    }
+    else if(bmi>=35 & bmi<40){
+      bmiBlock.style.color = 'red';
+      document.querySelector('#bmi').innerText = bmi+' Your are Obese-II'+'🙁';
+    }
+    else if(bmi>=40){
+      bmiBlock.style.color = 'red';
+      document.querySelector('#bmi').innerText = bmi+' Your are Obese-III'+'💀';
+    }
+    console.log(bmi)
+  })
+  let usernameEdit = document.querySelector('.username-edit');
+    usernameEdit.addEventListener('click',()=>{
+      textInput = document.getElementById('username');
+      textInput.focus(); 
+    })
+  let emailEdit = document.querySelector('.email-edit');
+    emailEdit.addEventListener('click',()=>{
+      textInput = document.getElementById('email');
+      textInput.focus(); 
+    })
+</script>
+{% endblock content %}

@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style2.css')}}">
+{% endblock style%}
+{%block content%}
+<section class="browse-emergency-section load-animate-2">
+    <div class="browse-emergency-container flex" id="browse-emergency-container">
+        <div class="emergency-button emergency-button-0 flex">Choking</div>
+        <div class="emergency-button emergency-button-1 flex">Heart Attack</div>
+        <div class="emergency-button emergency-button-2 flex">
+            Allergic Reactions
+        </div>
+        <div class="emergency-button emergency-button-3 flex">Drowning</div>
+        <div class="emergency-button emergency-button-4 flex">
+            Diabetic Emergencies
+        </div>
+        <div class="emergency-button emergency-button-5 flex">
+            Animal Bites and Stings
+        </div>
+        <div class="emergency-button emergency-button-6 flex">CPR</div>
+        <div class="emergency-button emergency-button-7 flex">
+            Fractures and Sprains
+        </div>
+        <div class="emergency-button emergency-button-8 flex">Poisoning</div>
+        <div class="emergency-button emergency-button-9 flex">
+            Bleeding and Wounds
+        </div>
+        <div class="emergency-button emergency-button-10 flex">Heatstroke</div>
+        <div class="emergency-button emergency-button-11 flex">
+            Pregnacy Labour
+        </div>
+    </div>
+</section>
+
+<!-- Font Awesome Linking -->
+<script src="https://kit.fontawesome.com/b88994d2e3.js" crossorigin="anonymous"></script>
+<!-- Script Files linking -->
+<script>
+    // JS For getting the taget of button
+    const action = document.getElementById("browse-emergency-container");
+    action.addEventListener("click", (e) => {
+        window.location.href = "{{ url_for('action') }}"
+        localStorage.setItem("textval", e.target.innerText);
+    })
+</script>
+{%endblock content%}

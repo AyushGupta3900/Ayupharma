@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='register.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='form.css')}}">
+{% endblock style%}
+{%block content%}
+<div class="form-container wrapper">
+    <div class="form-logo"></div>
+    <div class="box1">
+        <h1>Create Account</h1>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+
+            {{form.username.label(class = "form-control-label")}}<br />
+            {{form.username(class = "form-control",placeholder="First and last name")}}
+
+            {{form.mobile_number.label(class = "form-control-label")}}<br />
+            {{form.mobile_number(class = "form-control",placeholder="Enter the mobile number")}}
+
+            {{form.email.label(class = "form-control-label")}}<br />
+            {{form.email(class = "form-control" ,placeholder="abc123@gmail.com")}}
+
+            {{form.password.label(class = "form-control-label")}}<br />
+            {{form.password(class = "form-control" ,placeholder="At least 8 characters")}}
+
+            {{form.confirm_password.label(class = "form-control-label")}}<br />
+            {% if form.confirm_password.errors %}
+                {{ form.confirm_password(class="form-control is-invalid",placeholder="Confirm the password") }}
+                <div class="invalid-feedback">
+                    {% for error in form.confirm_password.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% else %}
+            {{form.confirm_password(class = "form-control" ,placeholder="Confirm the password")}}
+            {% endif %}
+            <div id="otp">To verify your number, we will send an OTP to your mobile number</div>
+
+            {{form.submit(class = "btn1")}}
+        </form>
+        <div class="have_Acc">Already have an account ?
+            <a href="{{url_for('signin')}}">Signin</a>
+        </div>
+    </div>
+</div>
+{%endblock content%}

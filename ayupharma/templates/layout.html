@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS files linking -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='load.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='color.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='nav.css')}}">
+    {% block style %}
+
+    {% endblock style%}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='button.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='links.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='utility.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='font.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='media.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='footer.css')}}">
+
+    <!-- Google Fonts Linking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Montserrat:wght@400;800&family=Open+Sans:wght@400;800&family=Roboto:wght@400;900&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="../static/resources/icon1.png" type="image/x-icon">
+    {% if title %}
+    <title>AyuPharma - {{title}}</title>
+    {% else %}
+    <title>AyuPharma</title>
+    {%endif%}
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav id="nav-bar">
+        <div class="nav-container flex">
+            <div class="logo">
+                <img src="../static/resources/main_logo.png" alt="" />
+            </div>
+            <ul class="nav-items flex">
+                <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="nav-link">About</a></li>
+                <!-- <li><a href="#" class="nav-link">Contact-Us</a></li> -->
+                <li><a href="{{ url_for('services') }}" class="nav-link">Services</a></li>
+                {% if current_user.is_authenticated %}
+                <li><a href="{{ url_for('account') }}" class="nav-link">Your Account</a></li>
+                <li><a href="{{ url_for('logout') }}" class="nav-link">Logout</a></li>
+                {%else%}
+                <li><a href="{{ url_for('register') }}" class="nav-link">Register Now</a></li>
+                <li><a href="{{ url_for('signin') }}" class="nav-link">Signin</a></li>
+                {%endif%}
+            </ul>
+            <div class="search-bar">
+                <!-- <script async src="https://cse.google.com/cse.js?cx=1122567c8bcc04c9f">
+                </script>
+                <div class="gcse-search"></div> -->
+                <i class="fa-solid fa-magnifying-glass search-icon custom-search-bar"></i>
+                <input type="search" name="search-bar" id="search-bar" placeholder="Search any herb"
+                    list="search-list" />
+                <datalist id="search-list">
+                    <option value="Ashwagandha">Ashwagandha</option>
+                    <option value="Brahmi">Brahmi</option>
+                    <option value="Triphala">Triphala</option>
+                    <option value="Neem">Neem</option>
+                    <option value="Tulsi">Tulsi</option>
+                    <option value=" Amla"> Amla</option>
+                    <option value="Ginger">Ginger</option>
+                    <option value="Turmeric">Turmeric</option>
+                    <option value="Cumin">Cumin</option>
+                    <option value="Cardamom">Cardamom</option>
+                    <option value="Fennel">Fennel</option>
+                    <option value="Licorice">Licorice</option>
+                </datalist>
+            </div>
+            <div class="hamburger-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <ul class="nav-items-1 flex">
+            <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+            <li><a href="{{ url_for('about') }}" class="nav-link">About</a></li>
+            <!-- <li><a href="#" class="nav-link">Contact-Us</a></li> -->
+            <li><a href="{{ url_for('services') }}" class="nav-link">Services</a></li>
+            {%if current_user.is_authenticated%}
+            <li><a href="{{ url_for('account') }}" class="nav-link">Your Account</a></li>
+            <li><a href="{{ url_for('logout') }}" class="nav-link">Logout</a></li>
+            {%else%}
+            <li><a href="{{ url_for('register') }}" class="nav-link">Register Now</a></li>
+            <li><a href="{{ url_for('signin') }}" class="nav-link">Signin</a></li>
+            {%endif%}
+        </ul>
+    </nav>
+    {% with messages = get_flashed_messages(with_categories= true) %}
+    {%if messages%}
+    {%for category, message in messages%}
+    <div class="alert alert-{{category}}">
+        {{message}}
+    </div>
+    {%endfor%}
+    {%endif%}
+    {% endwith %}
+    {% block content %}
+
+    {%endblock%}
+
+    <!-- Footer -->
+    <footer>
+        <div class="blur-image">
+            <div class="container flex footer-container">
+                <div class="footer-logo">
+                    <a href="#" class="company-logo">
+                        <img src="../static/resources/main_logo.png" alt="This is logo">
+                    </a>
+                    <p>Discover the Power of <br />Ayurveda for Optimal Health and Well-being</p>
+                </div>
+                <div class="link-columns flex">
+                    <div class="link-column">
+                        <h3>Core Servies</h3>
+                        <a href="{{ url_for('herb') }}" class="hover-link">Herb Encyclopedia</a>
+                        <a href="{{ url_for('emergencies') }}" class="hover-link">First Aid Assistance</a>
+                        <a href="{{ url_for('yoga') }}" class="hover-link">Exploring Yoga</a>
+                        <a href="{{ url_for('yoga') }}" class="hover-link">Ayurvedic Pharmacies</a>
+                    </div>
+                    <div class="link-column ">
+                        <h3>Web Portal</h3>
+                        <a href="https://ayushportal.nic.in/" class="hover-link">Ayush Research Portal</a>
+                        <a href="https://www.nia.nic.in/" class="hover-link">National Institute Of Ayurveda</a>
+                        <a href="https://ayush.gov.in/" class="hover-link">Ministry Of Ayush</a>
+                        <a href="https://www.who.int/" class="hover-link">World Health Organisation</a>
+                        <a href="https://www.india.gov.in/national-health-portal" class="hover-link">National Health
+                            Portal</a>
+                        <a href="http://www.dharaonline.org/Forms/Home.aspx" class="hover-link">DHARA</a>
+                        <div class="footer-button">
+                            Contact Us
+                        </div>
+                    </div>
+                    <div class="link-column">
+                        <h3>More About Us</h3>
+                        <a href="{{ url_for('home') }}" class="hover-link">Home Page</a>
+                        <a href="{{ url_for('about') }}" class="hover-link">About AyuPharma</a>
+                        <a href="{{ url_for('services') }}" class="hover-link">Services Provided By Us</a>
+                        <a href="{{ url_for('emergencies') }}" class="hover-link">Emergency Section</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="subfooter">
+        <div class="container flex subfooter-container">
+            <a href="{{ url_for('copy') }}" class="hover-link">&copy;Copyrights</a>
+            <a href="{{ url_for('copy') }}" class="hover-link">Privacy policy</a>
+            <a href="{{ url_for('copy') }}" class="hover-link">Terms & conditions</a>
+            <a href="{{ url_for('copy') }}" class="hover-link">Security information</a>
+            <div class="icons flex">
+                <a href="https://www.instagram.com/ayushgupta_3900/" class="hover-link"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/AyushGuptaDev" class="hover-link"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/ayush-gupta-a5a1ab272/" class="hover-link"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="hover-link"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Linking -->
+    <script src="https://kit.fontawesome.com/b88994d2e3.js" crossorigin="anonymous"></script>
+    <script>
+        let footerBtn = document.querySelector('.footer-button');
+        footerBtn.addEventListener('click', () => {
+            window.location.href = "{{ url_for('contact') }}"
+        })
+
+        // JavaScript code to hide the alert after 3 seconds
+        document.addEventListener('DOMContentLoaded', function () {
+            var alertElements = document.querySelectorAll('.alert');
+
+            alertElements.forEach(function (alert) {
+                alert.classList.add('show');
+                setTimeout(function () {
+                    alert.classList.remove('show');
+                    alert.classList.add('hide');
+                }, 3000);
+            });
+        });
+
+        let hamburgerBtn = document.querySelector('.hamburger-icon');
+        let navitems1 = document.querySelector('.nav-items-1');
+        hamburgerBtn.addEventListener('click', () => {
+
+            if (navitems1.classList.contains('display')) {
+                navitems1.classList.remove('display');
+                navitems1.style.maxHeight = null;
+            }
+            else {
+                navitems1.classList.add('display');
+                navitems1.style.maxHeight = navitems1.scrollHeight + 'px';
+            }})
+    </script>
+
+</body>
+
+</html>

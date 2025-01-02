@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static',filename='utility.css')}}">
+    {% block style %}
+
+    {% endblock style%}
+    <!-- Google Fonts Linking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Montserrat:wght@400;800&family=Open+Sans:wght@400;800&family=Roboto:wght@400;900&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="../static/resources/icon1.png" type="image/x-icon">
+    {% if title %}
+    <title>AyuPharma - {{title}}</title>
+    {% else %}
+    <title>AyuPharma</title>
+    {%endif%}
+</head>
+
+<body>
+    {% with messages = get_flashed_messages(with_categories= true) %}
+    {%if messages%}
+    {%for category, message in messages%}
+    <div class="alert alert-{{category}}">
+        {{message}}
+    </div>
+    {%endfor%}
+    {%endif%}
+    {% endwith %}
+
+    {% block content%}
+    
+    {%endblock content%}
+
+    <script>
+         // JavaScript code to hide the alert after 3 seconds
+         document.addEventListener('DOMContentLoaded', function () {
+            var alertElements = document.querySelectorAll('.alert');
+
+            alertElements.forEach(function (alert) {
+                alert.classList.add('show');
+                setTimeout(function () {
+                    alert.classList.remove('show');
+                    alert.classList.add('hide');
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>

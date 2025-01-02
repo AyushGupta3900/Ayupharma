@@ -1,0 +1,100 @@
+{%extends "layout.html"%}
+{%block style%}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='prompt.css')}}">
+{%endblock style%}
+{%block content%}
+<div class="prompt-head">
+  <h1 class="animate-character">Virtual Diagnosis</h1>
+</div>
+   <div class="container prompt-container">
+    <form method="POST" action="/output">
+            {% for question in questions %}
+          <div class="question-wrapper">
+            <div class="question">
+              <span class="question-text">{{ question }}</span>
+            </div>
+            <div class="options">
+               <div class="option option-1 ">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <label><input type="radio" name="question_{{ loop.index }}" value="yes" class="yes radio-btn ">Yes</label>
+               </div>
+                <div class="option option-2 ">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <label><input type="radio" name="question_{{ loop.index }}" value="no" class="no radio-btn">No</label>
+                </div>
+            </div>
+          </div>
+            {% endfor %}
+            <div class="center">
+              <div class="prev-btn update-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>Prev
+              </div>
+              <div class="next-btn update-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>Next
+              </div>
+        <button type="submit" class="analyse-btn update-btn displayNone">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>Analyse
+        </button>
+      </div>
+    </form>
+  </div>
+  <script>
+    let optionDiv = document.querySelectorAll('.option');
+    let input = document.querySelectorAll('.radio-btn');
+    optionDiv.forEach((element,index) => {
+      element.addEventListener('click',()=>{
+        console.log(input[index])
+        input[index].checked = true;
+      })
+    });
+
+    const nextButton = document.querySelector(".next-btn");
+    const prevButton = document.querySelector(".prev-btn");
+    const analyseButton = document.querySelector(".analyse-btn");
+    let currentSlideIndex = 0;
+    let questions = document.querySelectorAll('.question-wrapper');
+    questions.forEach((element)=>{
+      if(element!=questions[0]){
+      element.classList.add('displayNone');
+      }
+    })
+    function showNextSlide() {
+    if (currentSlideIndex < questions.length - 1) {
+      questions[currentSlideIndex].classList.add('displayNone');
+      currentSlideIndex++;
+        questions[currentSlideIndex].classList.remove('displayNone');
+      }
+      else if(currentSlideIndex ===questions.length - 1){
+      analyseButton.classList.remove('displayNone');
+    }
+  }
+  function showPrevSlide() {
+    if (currentSlideIndex > 0) {
+      questions[currentSlideIndex].classList.add('displayNone');
+      currentSlideIndex--;
+      questions[currentSlideIndex].classList.remove('displayNone');
+    }
+    if(currentSlideIndex <questions.length - 1){
+      analyseButton.classList.add('displayNone');
+    }
+  }
+
+  nextButton.addEventListener("click", showNextSlide);
+  prevButton.addEventListener("click", showPrevSlide);
+   </script>
+{%endblock content%}

@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='services.css')}}">
+{% endblock style%}
+{%block content%}
+<div class="about-section">
+  <h1 class="load-animate">Services</h1>
+  <p class="load-animate">
+    <i class="fa-solid fa-quote-left quote-icon"></i>
+    Transforming Health: Uniting Ayurveda and Technology. Explore our
+    services, blending ancient wisdom with modern innovation. From
+    personalized assessments to virtual diagnosis, we're your path to
+    holistic well-being.
+    <i class="fa-solid fa-quote-right quote-icon"></i>
+  </p>
+</div>
+<div class="container">
+  <!-- <h2>Services Provided by AyuPharma</h2> -->
+  <div class="service-card">
+    <h2 class="service-heading">
+      <i class="fa-solid fa-user-nurse"></i> Core Services
+    </h2>
+    <ul>
+      <li>Drug Recommendation</li>
+      <li>Virtual Diagnosis</li>
+      <li>Locating Nearby Ayurvedic Pharmacies</li>
+      <li>Personalized Health Assessments</li>
+    </ul>
+  </div>
+
+  <div class="service-card">
+    <h2 class="service-heading">
+      <i class="fa-solid fa-user-nurse"></i> Additional Features
+    </h2>
+    <ul>
+      <li>First Aid and Emergency Assistance</li>
+      <li>Comprehensive Knowledge Repository</li>
+    </ul>
+  </div>
+
+  <div class="service-card">
+    <h2 class="service-heading">
+      <i class="fa-solid fa-user-nurse"></i> Future Endeavors
+    </h2>
+    <ul>
+      <li>E-commerce Platform</li>
+      <li>Community Forum</li>
+    </ul>
+  </div>
+
+  <p>
+    AyuPharma's overarching mission is to bridge the gap between traditional
+    Ayurvedic wisdom and modern healthcare, making Ayurveda accessible and
+    beneficial to a global audience. By harnessing the power of technology
+    and innovation, AyuPharma aspires to enhance the understanding and
+    practical application of Ayurveda, ultimately contributing to improved
+    health and well-being on a global scale.
+  </p>
+</div>
+
+<!-- Font Awesome Linking -->
+<script src="https://kit.fontawesome.com/b88994d2e3.js" crossorigin="anonymous"></script>
+{%endblock content%}

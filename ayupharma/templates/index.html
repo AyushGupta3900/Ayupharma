@@ -1,0 +1,365 @@
+{% extends "layout.html" %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style1.css')}}">
+{% endblock style%}    
+{%block content%}
+    <!-- Main Section -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="blur-image">
+                <div class="hero-container container flex load-animate-2" id="hero-section">
+                    <div class="tag-line">
+                        <h1>Discover Ayurveda: <br />Your Gateway to Traditional Healing</h1>
+                        <p>
+                            Experience personalized Ayurvedic guidance through our platform.
+                            Utilize our virtual diagnosis feature to receive tailored herbal
+                            recommendations, enhancing your well-being with authentic and
+                            effective Ayurvedic solutions. Your holistic health starts here
+                        </p>
+                    </div>
+                    <div class="button-container flex">
+                        <div class="assessment-button primary-button">
+                            Virtual-Diagnosis
+                        </div>
+                        <div class="emergency-button secondary-button">
+                            Browse-Emergency
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Information Section  -->
+        <section class="information-section">
+            <div class="information-container container flex">
+                <div class="card-1-section">
+                    <div class="blur-image-2">
+                        <div class="information-card flex" id="card-1">
+                            <h4 class="card-head">Herb Encyclopedia</h4 class="card-head">
+                            <div class="paragraph">
+                                <p class="explain">
+                                    Welcome to our Herb Encyclopedia, where we unveil the Ayurvedic
+                                    secrets of herbs. Explore the ancient healing traditions of
+                                    Ayurveda and harness the power of nature for your well-being.
+                                </p>
+                            </div>
+                            <div class="card-button secondary-button herb-button">
+                                Explore
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-2-section">
+                    <div class="blur-image-2">
+                        <div class="information-card flex" id="card-2">
+                            <h4 class="card-head">Nearby Ayurvedic Pharmacies</h4 class="card-head">
+                            <div class="paragraph">
+                                <p class="explain">
+                                    Locate nearby Ayurvedic pharmacies effortlessly. Discover the
+                                    holistic healing solutions of Ayurveda just around the corner.
+                                </p>
+                            </div>
+                            <div class="card-button secondary-button">
+                                Explore
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-3-section">
+                    <div class="blur-image-2">
+                        <div class="information-card flex" id="card-3">
+                            <h4 class="card-head">Discover the Power of Yoga</h4 class="card-head">
+                            <div class="paragraph">
+                                <p class="explain">
+                                    Begin your journey to wellness and inner balance through yoga.
+                                    Discover poses, techniques, and tips to enhance your physical and
+                                    mental well-being.
+                                </p>
+                            </div>
+                            <div class="card-button secondary-button yoga-btn">
+                                Explore
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-4-section">
+                    <div class="blur-image-2">
+                        <div class="information-card flex" id="card-4">
+                            <h4 class="card-head">First Aid Assistance</h4 class="card-head">
+                            <div class="paragraph">
+                                <p class="explain">
+                                    Our First Aid Assistance section is here to guide you in
+                                    emergencies. Find quick, step-by-step instructions for common
+                                    injuries and illnesses. Be prepared, stay safe
+                                </p>
+                            </div>
+                            <div class="card-button secondary-button first-aid-assistance-btn">
+                                Explore
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote slider Section -->
+        <section class="quote-slider">
+            <div class="quote-slider-container flex blur-image-2">
+                <div class="prev"><i class="fa-solid fa-angle-left quote-control"></i></div>
+                <!-- <span class="prev">Prev</i></span> -->
+                <div class="slide flex">
+                    <!-- <img src="resources/1.jpeg" alt="" class="quote-image"> -->
+                    <p>Because we cannot scrub our inner body we need to learn a few skills to help cleanse our tissues,
+                        organs, and mind. This is the art of Ayurveda.</p>
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details">
+                        <span class="quote-person-name">Sebastian Pole</span>
+                    </div>
+                </div>
+                <div class="slide flex active">
+                    <!-- <img src="resources/2.jpeg" alt="" class="quote-image"> -->
+                    <p>Science of yoga and Ayurveda is subtler than the science of medicine because the science of
+                        medicine is often the victim of statistical manipulation.</p>
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details">
+                        <span class="quote-person-name">Amit Ray</span>
+                    </div>
+                </div>
+                <div class="slide flex active">
+                    <!-- <img src="resources/3.jpg" alt="" class="quote-image"> -->
+                    <p>Ayurveda teaches us to cherish our innate-nature “to love and honor who we are”, not as what
+                        people think or tell us, “who we should be.</p>
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details">
+                        <span class="quote-person-name">Prana Gogia</span>
+                    </div>
+                </div>
+                <div class="next"><i class="fa-solid fa-angle-right quote-control"></i></div>
+                <!-- <span class="next">Next</span> -->
+                <div class="blank"></div>
+            </div>
+        </section>
+
+        <!-- Faq -->
+        <section class="faq-section">
+            <div class="faq-container container">
+                <h2 class="faq-head">FAQ's</h2>
+                <div class="accordian">
+                    <div class="question">
+                        <h4>What is Ayurveda and what diseases does it help with?</h4>
+                        <i class="fa-solid fa-caret-down icon"></i>
+                    </div>
+                    <div class="answer">
+                        <p>
+                            Ayurveda is a science of life based on many years of experience and knowledge preserved and
+                            passed down through the centuries. Its homeland is India, where five thousand years ago the
+                            ancient doctrine of man and the world around him began. Today, Ayurveda has a comprehensive
+                            application in the treatment of many diseases and in the approach to environmentally
+                            friendly lifestyle.
+
+                            <br />
+                            The basis of the used methods and therapies is the establishment of the root cause of the
+                            disease states and the disturbed energy balance in the human body. Many remedial alternative
+                            therapies can be administered separately or in parallel with conventional medicine.
+
+                            <br />
+                            Ayurveda has a positive effect on diseases of the joints, urinary system, gastrointestinal
+                            tract, circulatory system, allergic reactions, skin diseases, depression and much more.
+                            Ayurvedic medicine is comprehensive and environmentally friendly.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordian">
+                    <div class="question">
+                        <h4>Ayurveda and the eternal question of the meaning of life</h4>
+                        <i class="fa-solid fa-caret-down icon"></i>
+                    </div>
+                    <div class="answer">
+                        <p>
+                            The meaning of life reveals the four key goals of life. The first is Dharma and it has to do
+                            with duty and responsibility. Therefore, it is considered to be prevalent among people with
+                            leadership qualities and opportunities to lead and protect others.
+                            <br />
+                            Prosperity is associated with Art, which develops qualities such as entrepreneurship and
+                            trade. The third key goal is Moksha and involves the search for knowledge, ie. these are the
+                            people with an attitude towards science. Kama is the last group where emotions and feelings
+                            prevail. Here the meaning of human existence is connected with philosophical self-knowledge.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordian">
+                    <div class="question">
+                        <h4>What is the secret of well-being?</h4>
+                        <i class="fa-solid fa-caret-down icon"></i>
+                    </div>
+                    <div class="answer">
+                        <p>
+                            Ayurveda accepts that each of us needs to make sense of and see our own path in order to
+                            follow it consciously. This philosophy of life preaches understanding and points out ways to
+                            achieve harmony.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordian">
+                    <div class="question">
+                        <h4>Does Ayurveda have dietary rules?</h4>
+                        <i class="fa-solid fa-caret-down icon"></i>
+                    </div>
+                    <div class="answer">
+                        <p>
+                            Balance dominates Indian philosophy in terms of food as well. It is good to start the day
+                            with a glass of warm water, then have breakfast with fruits and vitamin-rich products.
+                            Lunch includes meat or vegan products. Dried and fresh fruits, as well as raw nuts are
+                            suitable for afternoon breakfast. Dinner is light with more leafy vegetables or lean soups.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Article -->
+        <section class="news-section">
+            <h2 class="news-head">News Articles</h2>
+            <div class="news-container container flex">
+                <div class="news-card" id="news-card-1">
+                    <img src="../static/resources/img20.jpg" alt="">
+                    <p>D2C platform The Ayurveda Experience clocks strong revenue growth in FY 23</p>
+                </div>
+                <div class="news-card" id="news-card-2">
+                    <img src="../static/resources/img1.jpg" alt="">
+                    <p>'SMART' programme launched to boost R&D in Ayurveda</p>
+                </div>
+                <div class="news-card" id="news-card-3">
+                    <img src="../static/resources/img4.jpeg" alt="">
+                    <p>The Ayurveda Experience raises ₹50 crore</p>
+                </div>
+                <div class="news-card" id="news-card-4">
+                    <img src="../static/resources/img5.jpeg" alt="">
+                    <p>Prescription must for online sale of traditional medicines: Consumer protection body</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Script Files linking -->
+    <script>
+        const sliderContainer = document.querySelector('.quote-slider-container');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        let currentSlideIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.opacity = '1';
+                    slide.style.display = 'block';
+                } else {
+                    slide.style.opacity = '0';
+                    slide.style.display = 'none';
+                }
+            });
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+            showSlide(currentSlideIndex);
+        });
+        // ... previous code
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            showSlide(currentSlideIndex);
+        }
+
+        function prevSlide() {
+            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+            showSlide(currentSlideIndex);
+        }
+
+        prevButton.addEventListener('click', () => {
+            prevSlide();
+        });
+
+        nextButton.addEventListener('click', () => {
+            nextSlide();
+        });
+
+        showSlide(currentSlideIndex);
+
+
+        // Set an interval to change the slide every 3 seconds
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+        // ... rest of your code for accordions
+
+        nextButton.addEventListener('click', () => {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            showSlide(currentSlideIndex);
+        });
+
+        showSlide(currentSlideIndex);
+
+        const accordians = document.querySelectorAll('.accordian');
+
+        accordians.forEach(accordian => {
+            const icon = accordian.querySelector('.icon');
+            const answer = accordian.querySelector('.answer');
+            const question = accordian.querySelector('.question');
+
+            accordian.addEventListener('click', () => {
+
+                if (icon.classList.contains('active')) {
+                    icon.classList.remove('active');
+                    answer.style.maxHeight = null;
+                    question.style.color = 'black';
+                }
+                else {
+                    icon.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    question.style.color = 'purple';
+                }
+            })
+        })
+
+        const assessmentBtn = document.querySelector('.assessment-button');
+        assessmentBtn.addEventListener('click',()=>{
+            window.location.href = "{{ url_for('search') }}"
+        })
+        const emergencyBtn = document.querySelector('.emergency-button');
+        emergencyBtn.addEventListener('click', () => {
+            window.location.href = "{{ url_for('emergencies') }}"
+        })
+
+        const herbBtn = document.querySelector('.herb-button');
+        herbBtn.addEventListener('click', () => {
+            window.location.href = "{{ url_for('herb') }}"
+        })
+
+        const firstAidAssistanceBtn = document.querySelector('.first-aid-assistance-btn');
+        firstAidAssistanceBtn.addEventListener('click', () => {
+            window.location.href = "{{ url_for('emergencies') }}"
+        })
+
+        const yogaBtn = document.querySelector('.yoga-btn');
+        yogaBtn.addEventListener('click', () => {
+            window.location.href = "{{ url_for('yoga') }}"
+        })
+
+        const newsCards = document.querySelectorAll('.news-card');
+        newsCards[0].addEventListener('click', () => {
+            window.location.href = "https://www.thehindubusinessline.com/companies/d2c-platform-the-ayurveda-experience-clocks-strong-revenue-growth-in-fy-23/article66846068.ece";
+        })
+        newsCards[1].addEventListener('click', () => {
+            window.location.href = "https://www.thehindubusinessline.com/news/science/smart-programme-launched-to-boost-rd-in-ayurveda/article66332510.ece#:~:text=The%20Scope%20for%20Mainstreaming%20Ayurveda,institutions%20under%20the%20Ayush%20Ministry.";
+        })
+        newsCards[2].addEventListener('click', () => {
+            window.location.href = "https://www.thehindubusinessline.com/companies/the-ayurveda-experience-raises-50-crore/article66284237.ece";
+        })
+        newsCards[3].addEventListener('click', () => {
+            window.location.href = "https://www.thehindubusinessline.com/economy/prescription-must-for-online-sale-of-ayurveda-siddha-and-unani-drugs-consumer-protection-body/article65639870.ece";
+        })
+        
+    </script>
+
+{%endblock content%}  

@@ -1,0 +1,93 @@
+{% extends "layout.html" %}    
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style8.css')}}">
+{% endblock style%} 
+{%block content%}
+<section class="contact-us load-animate-2 container">
+    <div class="title ">
+        <h1>We'll get in touch shortly</h1>
+    </div>
+    <div class="box">
+        <div class="contact form">
+            <p>Contact Us</p>
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <div class="formbox">
+                    <div class="row50">
+                        <div class="inputbox">
+                            <!-- <span>First Name</span> -->
+                            <!-- <input type="text" placeholder="First name" required="name"> -->
+                            {{form.firstname.label(class = "form-control-label")}}<br />
+                            {{form.firstname(placeholder="First name")}}
+                        </div>
+                        <div class="inputbox">
+                            <!-- <span>Last Name</span>
+                                <input type="text" placeholder="Last name" required="name"> -->
+                                {{form.lastname.label(class = "form-control-label")}}<br />
+                                {{form.lastname(placeholder="Last name")}}
+                        </div>
+                    </div>
+                    <div class="row50">
+                        <div class="inputbox">
+                            <!-- <span>Email</span>
+                            <input type="text" placeholder="example@email.com"> -->
+                            {{form.email.label(class = "form-control-label")}}<br />
+                            {{form.email(placeholder="abc123@gmail.com")}}
+                        </div>
+                        <div class="inputbox">
+                            <!-- <span>Phone number</span>
+                            <input type="number" placeholder=" +91 XXXXXXXXXX" name="someid"> -->
+                            {{form.mobile_number.label(class = "form-control-label")}}<br />
+                            {{form.mobile_number(placeholder="Enter the mobile number")}}
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputbox">
+                            <!-- <span>Message</span>
+                            <textarea placeholder="Write your message here...."></textarea> -->
+                            {{form.message.label(class = "form-control-label")}}<br />
+                            {{form.message(placeholder="Enter the message")}}
+                        </div>
+                    </div>
+                    <div class="row100 send">
+                        <div class="send-btn">
+                            <div class="inputbox send-btn-btn flex">
+                                <!-- <input type="submit" value="Send" class="send-button"> -->
+                                {{form.submit(class = "send-button")}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="contact info">
+            <h3> Contact Info </h3>
+            <div class="infobox">
+                <div>
+                    <span><i class="fa-solid fa-location-dot" name="location"></i></span>
+                    <p class="add"">Sonipat, Haryana - 131001<br> INDIA </p>
+                </div>
+                <div>
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <a href="mailto:AyuPharma@email.com"
+                        style="color: black;">ayupharma.ayucare@email.com</a>
+                </div>
+                <div>
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <a href="tel:+91 987 654 3210" style="color: black;">+91 XXXX XXXX XX</a>
+                </div>
+                <div>
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <a href="tel:+91 987 654 3210" style="color: black;">+91 XXXX XXXX XX</a>
+                </div>
+            </div>
+        </div>
+        <div class="contact map">
+            <img src="../static/resources/img1.jpg" alt="" width="100%">
+        </div>
+    </div>
+</section>
+
+<!-- Font Awesome Linking -->
+<script src="https://kit.fontawesome.com/b88994d2e3.js" crossorigin="anonymous"></script>
+{%endblock content%}  
