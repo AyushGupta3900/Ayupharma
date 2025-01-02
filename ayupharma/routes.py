@@ -10,9 +10,6 @@ import spacy
 import time
 import asyncio
 
-from celery import Celery
-celery = Celery('tasks', broker='redis://localhost:6379/0')
-
 @app.route("/")
 @app.route("/home")
 def home():
@@ -149,7 +146,6 @@ def account():
     return render_template('account.html',title='account',image_file=image_file,form=form,form1=form1)
 
 
-@celery.task
 async def generate_questions():
     # using cached model 
     nlp = get_nlp_model()
