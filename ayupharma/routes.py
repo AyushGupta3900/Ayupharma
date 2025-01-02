@@ -307,5 +307,5 @@ nlp = None
 def get_nlp_model():
     global nlp
     if nlp is None:
-        nlp = spacy.load("en_core_web_lg")  
+        nlp = spacy.load("en_core_web_sm")  
     return nlp
