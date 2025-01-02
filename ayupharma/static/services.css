@@ -1,0 +1,82 @@
+.about-section {
+    padding: 20vh;
+    text-align: center;
+    background-image: url("../static/resources/demo5.jpg");
+    background-size: 100%;
+    /* background-color: #474e5d; */
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .about-section h1 {
+    font-size: 80px;
+    text-shadow: 1px 2px 10px black;
+  }
+
+  .about-section h3 {
+    font-size: 50px;
+    text-shadow: 1px 2px 10px black;
+  }
+
+  .quote-icon {
+    font-size: 40px;
+    text-shadow: 1px 2px 10px black;
+  }
+
+  .service-card {
+    background-color: #f8f8f8;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 2px 10px gray;
+  }
+
+  .service-heading {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .container ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+  }
+
+  .container ul li {
+    margin-bottom: 10px;
+  }
+
+  .container p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+  }
+
+  @media screen and (max-width: 450px) {
+    .nav-items-1{
+      width: 85vw  !important;
+    }
+    .about-section {
+      padding-inline:10px;
+      background-size: 250vw 80vh;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .about-section h1 {
+      font-size: 60px;
+    }
+    .about-section h3 {
+      font-size: 15px;
+      text-shadow: 1px 2px 5px black  !important; 
+    }
+    .quote-icon {
+      font-size: 10px;
+    }
+  }
+  

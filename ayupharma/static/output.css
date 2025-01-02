@@ -1,0 +1,47 @@
+/* Apply styles to the container */
+.output-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+/* Apply styles to the "herb-ouput" section */
+.herb-ouput {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Apply styles to the "yoga-output" section */
+.yoga-output {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Style for the text inside <p> elements */
+p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Style for the header (h2) elements */
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Customize the appearance of the "answer" text */
+.b {
+    font-weight: bold;
+    color: #0066cc;
+}
+
+/* Add more styles as needed based on your design preferences */

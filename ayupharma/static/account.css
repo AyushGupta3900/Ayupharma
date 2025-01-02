@@ -1,0 +1,249 @@
+/* account.css */
+.account-section {
+  background-color: rgb(239, 241, 247);
+}
+
+.account-container {
+  padding-block: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  outline: 5px solid rgb(232, 248, 251);
+  padding: 5px;
+  transition: all 200ms ease-in;
+}
+
+.png-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  /* padding: 5px; */
+  /* outline: 4px solid rgb(232, 248, 251); */
+  border-radius: 50%;
+  margin-inline: 5px;
+}
+
+.account-heading {
+  margin-right: 40vw;
+}
+
+.account-info {
+  width: 85vw;
+  margin: 0 auto;
+  height: 20vh;
+  color: white;
+  gap: 40px;
+  background-image: linear-gradient(to right, rgb(38, 44, 61), rgb(74, 76, 93));
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px rgb(74, 76, 93);
+  padding: 30px;
+}
+
+.account-info:hover .profile-image {
+  outline: 5px solid green;
+  transform: scale(1.01);
+  /* animation: flikker 0.3s ease-in-out 0.1s infinite alternate ; */
+}
+
+/* @keyframes flikker {
+  from {
+    outline: 5px solid green;
+  }
+  to{
+  outline: 5px solid white;
+  }
+} */
+.user-name {
+  color: rgb(218, 213, 213);
+  font-size: 20px;
+}
+
+.gmail {
+  color: rgb(157, 161, 176);
+  font-size: 15px
+}
+
+.form-control-label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 80%;
+  font-weight: bold;
+  padding: 10px;
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.more-info {
+  margin: 0 auto;
+  width: 85vw;
+  padding: 30px;
+}
+
+#weight,
+#height,
+#bmi {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.acc-img {
+  width: 5vw;
+  height: 10vh;
+}
+
+.health-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: black;
+  background-color: rgb(240, 240, 240);
+}
+
+.health-card {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  height: 54vh;
+  display: flex;
+  border-radius: 15px;
+  padding: 10px;
+  background: white;
+  transition: 90ms ease-out all;
+  cursor: pointer;
+}
+
+.health-card:hover {
+  transform: scale(1.02) translateY(5px);
+}
+
+.health-card:hover .acc-img {
+  -webkit-filter: drop-shadow(1px 1px 10px skyblue);
+}
+
+.health-card-head {
+  font-size: 22px;
+  color: #31708f;
+}
+
+.health-card-0 {
+  background-color: transparent !important;
+}
+
+.form-control {
+
+  background-color: transparent !important;
+}
+
+.update-form {
+  color: black;
+}
+
+.head-item {
+  justify-content: space-between;
+}
+
+.disease {
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: opacity 0.5s;
+  margin-block: 10px;
+}
+
+.disease-1 {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+  box-shadow: 1px 2px 3px #3c763d;
+}
+
+.disease-2 {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+  box-shadow: 1px 2px 3px #a94442;
+}
+
+.disease-3 {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+  box-shadow: 1px 2px 3px #31708f;
+}
+
+.disease-4 {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+  box-shadow: 1px 2px 3px #8a6d3b;
+}
+
+.form-picture-btn {
+  color: #31708f;
+}
+
+.username-edit,
+.email-edit {
+  margin-left: 10px;
+}
+
+@media screen and (max-width:1100px) {
+
+  .health-card {
+    margin: 0 auto;
+    width: 90%;
+    height: 60vh;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .acc-img {
+    width: 18vw;
+    height: 20vh;
+  }
+
+  .health-card-head {
+    font-size: 30px;
+  }
+
+  .png-image {
+    display: none;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .nav-items-1{
+    width: 86vw !important;
+  }
+  .health-card {
+    width: 90%;
+    height: 50vh;
+  }
+
+  .acc-img {
+    width: 20vw;
+    height: 10vh;
+  }
+
+  .health-card-head {
+    font-size: 30px;
+  }
+
+  .account-info {
+    width: 80vw;
+    height: 30vh;
+  }
+}

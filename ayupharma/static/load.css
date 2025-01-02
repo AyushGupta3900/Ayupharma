@@ -1,0 +1,63 @@
+.wrapper{
+    animation: transitionIn 1s ease-in 100ms;
+}
+.load-animate{
+    animation: headingIn 500ms ease-in 100ms;
+}
+.load-animate-2{
+    animation: contentIn 800ms ease-in 100ms;
+}
+.load-animate-3{
+    animation: buttonIn 500ms ease-in 100ms;
+}
+.load-animate-4{
+    animation: pageIn 500ms ease-in 1s;
+}
+@keyframes transitionIn {
+    from{
+        transform: translateY(-200px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes headingIn {
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes contentIn {
+    from{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes buttonIn {
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes pageIn {
+    from{
+        opacity: 0;
+        transform: translateX(-0px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

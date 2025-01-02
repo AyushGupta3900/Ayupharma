@@ -1,0 +1,22 @@
+:root{
+    /* Website-colors */
+    --primary-text-color: rgb(141,179,82) !important;
+    --secondary-text-color: rgb(38,38,38) !important;
+    --accent-color: rgb(245,245,245)!important;
+    --accent-color-dark:green !important;
+    --padding-inline-section:20px !important;
+
+    /* Button-colors */
+    --primary-background-color:rgb(223,99,59)!important;
+    --secondary-background-color: transparent !important;
+    --primary-button-text-color: white !important;
+    --secondary-button-text-color: white!important;
+    --extra-color: rgb(84,90,44) !important;
+    --extra-color-dark: rgb(223,99,59) !important;
+
+    /* Links-colors */
+    --link-color-before:black;
+    --link-color-after:green;
+
+    /* Extra-colors */
+}

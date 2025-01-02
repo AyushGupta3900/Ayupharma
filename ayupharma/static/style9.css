@@ -1,0 +1,317 @@
+/* CSS FOR yoga.html */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Browse yoga Page */
+.browse-yoga-section{
+    margin-top: 10px;
+    margin-inline: 10px;
+}
+.browse-yoga-container{
+    padding-top: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+.yoga-button{
+    height: 160px;
+    width: 24%;
+    /* border: 1px solid gray; */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 2px 10px black;
+    font-size: 18px;
+    font-weight: 900;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.yoga-button:hover{
+    transform: scale(1.02);
+    font-size: 20px;
+    text-shadow: 1px 2px 10px yellowgreen;
+}
+.yoga-button-0 {
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.yoga-button-0::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/../static/resources/i1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.3s ease; 
+    z-index: -1; 
+}
+.yoga-button-0:hover::before {
+    transform: scale(1.2); 
+}
+
+.yoga-button-1 {
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.yoga-button-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/../static/resources/i2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.3s ease; 
+    z-index: -1; 
+}
+.yoga-button-1:hover::before {
+    transform: scale(1.2); 
+}
+.yoga-button-2 {
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.yoga-button-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/../static/resources/i4.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.3s ease; 
+    z-index: -1; 
+}
+.yoga-button-2:hover::before {
+    transform: scale(1.2); 
+}
+.yoga-button-3 {
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.yoga-button-3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/../static/resources/i6.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.3s ease; 
+    z-index: -1; 
+}
+.yoga-button-3:hover::before {
+    transform: scale(1.2); 
+}
+.yoga-button-4 {
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.yoga-button-4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/../static/resources/i7.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.3s ease; 
+    z-index: -1; 
+}
+.yoga-button-4:hover::before {
+    transform: scale(1.2); 
+}
+.yoga-button-5 {
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.yoga-button-5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/../static/resources/i11.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.3s ease; 
+    z-index: -1; 
+}
+.yoga-button-5:hover::before {
+    transform: scale(1.2); 
+}
+.yoga-button-6 {
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.yoga-button-6::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/../static/resources/i10.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.3s ease; 
+    z-index: -1; 
+}
+.yoga-button-6:hover::before {
+    transform: scale(1.2); 
+}
+.yoga-button-7 {
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.yoga-button-7::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/../static/resources/i0.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.3s ease; 
+    z-index: -1; 
+}
+.yoga-button-7:hover::before {
+    transform: scale(1.2); 
+}
+.yoga-button-8 {
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.yoga-button-8::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/../static/resources/i14.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.3s ease; 
+    z-index: -1; 
+}
+.yoga-button-8:hover::before {
+    transform: scale(1.2); 
+}
+.yoga-button-9 {
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.yoga-button-9::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/../static/resources/i13.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.3s ease; 
+    z-index: -1; 
+}
+.yoga-button-9:hover::before {
+    transform: scale(1.2); 
+}
+.yoga-button-10 {
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.yoga-button-10::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/../static/resources/i12.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.3s ease; 
+    z-index: -1; 
+}
+.yoga-button-10:hover::before {
+    transform: scale(1.2); 
+}
+.yoga-button-11 {
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.yoga-button-11::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/../static/resources/i15.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform s ease; 
+    z-index: -1; 
+}
+.yoga-button-11:hover::before {
+    transform: scale(1.2); 
+}
+footer{
+    margin-top: 20px;
+}

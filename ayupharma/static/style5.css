@@ -1,0 +1,81 @@
+/* CSS For action.html  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Action Container CSS */
+.action-section{
+    margin: 20px;
+}
+.action-container{
+    padding-block: 30px;
+    background: url('/../static/resources/bag.jpg');
+    background-size: cover;
+}
+.emergency-heading h2{
+    color:  rgba(0, 0, 255, 0.6);
+    text-shadow: 1px 1px white;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.content-container{
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.content{
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(204, 14, 243, 0.2);
+}
+.content h3{
+    color: rgba(0, 0, 0, 0.603);
+    text-shadow: 0 0 0;
+}
+.full-guide-btn{
+    /* margin-block: 10px; */
+    margin: 0 auto;
+    width: 80%;
+    background-color: rgba(0, 0, 255, 0.4);
+    border-radius: 20px;
+    border: 0;
+}
+.left{
+    width: 35vw;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.main-content{
+    padding: 5px;
+}
+.main-content li{
+    list-style-type: disc;
+    color: rgba(12, 41, 4, 0.9);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-block: 4px;
+}
+.right p{
+    color: rgba(0, 0, 255, 0.6) ;
+    text-shadow: 1px 1px white;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 800;
+}
+.video-tutorial{
+    margin-top: 20px
+}
+
+@media screen and (max-width: 610px) {
+    .right iframe{
+        width: 85vw;
+        height: 25vh;
+    }
+}

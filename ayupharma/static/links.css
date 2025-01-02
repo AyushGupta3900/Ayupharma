@@ -1,0 +1,17 @@
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul{
+    list-style-type: none;
+}
+.hover-link{
+    color: var(--link-color-before);
+    transition: 0.2s ease-in;
+}
+.hover-link:hover{
+    color: var(--link-color-after);
+}
+.hover-link:active{
+    color: red;
+}

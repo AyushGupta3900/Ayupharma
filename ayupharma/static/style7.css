@@ -1,0 +1,140 @@
+/* CSS For yogadetails.html */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-size: 22px; */
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.head{
+    display: flex;
+    background: url('/../static/resources/img8.jpg') no-repeat center center/cover;
+    height: 110vh;
+    margin-bottom: 50px;
+    
+}
+
+.grid-layout{
+    display: grid;
+    grid-template-areas: 'main main aside';
+}
+
+main{
+   grid-area: 'main';   
+}
+
+.main-heading{
+    font-size: clamp(40px,10vw,180px);
+    font-family: 'Lato', sans-serif;
+    
+    text-align: center;
+    color: rgb(82, 199, 245);
+    text-shadow: 4px 4px rgb(1, 18, 78);
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    padding: 20px;
+}
+
+.sub-heading{
+    font-size: clamp(25px,5vw,40px);
+    font-family: 'Lato', sans-serif;
+    margin:10px 10px 20px 10px;
+    text-shadow: 1px 2px 10px white;
+    align-self: flex-start;
+}
+h2{
+    font-weight: 900;
+}
+.blur-image-d{
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.411);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sections{
+    margin:30px 40px;
+    padding: 40px;
+    background-color: whitesmoke;
+    border: 0.8px solid rgb(232, 227, 227);
+}
+
+.para{
+    font-size: clamp(12px,2.7vw,17px);
+    line-height: clamp(20px,4vw,30px);
+}
+
+
+/*Aside */
+aside{
+    grid-area: 'aside';
+    display: flex;
+    flex-direction: column;
+    justify-content: first start;
+    align-items: center;
+    margin-top: 20px;
+}
+.facts-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin:30px 40px;
+    padding: 50px 20px;
+    width:25vw;
+    background-color: whitesmoke;
+    border: 0.8px solid rgb(232, 227, 227);
+}
+.aside-sub-heading{
+    font-size: clamp(20px,4vw,35px);
+    font-weight: 800;
+}
+
+.facts{
+    border: 0.8px solid rgb(232, 227, 227);
+    margin: 20px;
+    height: 55vh;
+    background-color: rgba(0, 255, 0, 0.01);
+}
+
+.facts img{
+    width:20vw;
+    height:30vh;
+}
+.fact-text{
+    font-weight: 800;
+    padding: 10px;
+    text-align: center;
+}
+.fact-text div{
+    margin-top: 10px;
+}
+.quote{
+    font-size: 15px;
+    color: rgb(59, 59, 127);
+}
+.video{
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 450px) {
+    .main-heading {
+        font-size: 60px !important;
+    }
+    .head {
+        background-position: center;
+        background-size: 250vw 80vh !important;
+        height: 80vh;
+    }
+}
