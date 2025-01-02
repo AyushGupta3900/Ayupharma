@@ -1,1 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "ayupharma/__init__.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/ayupharma/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "ayupharma/__init__.py"
+    }
+  ]
+}
 
