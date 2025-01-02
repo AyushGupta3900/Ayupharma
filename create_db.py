@@ -3,7 +3,7 @@ from ayupharma.models import User,Disease
 from flask_login import login_user,current_user,logout_user,login_required
 import queue
 import spacy
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_lg")
 # nlp = spacy.load("en_core_web_lg")
 # nlp = spacy.load("en_core_med7_lg")
 with app.app_context(): 
