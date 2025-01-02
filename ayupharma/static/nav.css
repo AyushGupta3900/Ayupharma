@@ -1,0 +1,73 @@
+/* Nav Bar CSS */
+.nav-container {
+    width: 100%;
+    margin-top: -7px;
+    background-color: var(--accent-color);
+    gap: 4vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    /* position: fixed; */
+    border-left: 5px solid var(--primary-text-color);
+    /* position: fixed; */
+}
+
+.logo img {
+    height: 100px;
+    width: 300px;
+    filter: drop-shadow(1px 2px 20px white);
+}
+
+.search-bar input {
+    width: 15vw;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.search-icon {
+    font-size: 18px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.fa-magnifying-glass {
+    font-size: 18px;
+    margin-right: 8px;
+    color: #333;
+}
+
+#search-bar {
+    flex: 1;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    padding: 6px;
+    background: transparent;
+}
+.hamburger-icon{
+    display: none;
+    margin-right:5px ;
+}
+.nav-items {
+    gap: 4vw;
+}
+.nav-link {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    transition: all 0s ease-in;
+}
+.nav-link:hover {
+    color: green;
+}
+.nav-link:active {
+    color: red;
+}
+.nav-items.display{
+    display: none;
+}
+.nav-items-1.display{
+    padding-bottom: 15px;
+}

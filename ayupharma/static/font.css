@@ -1,0 +1,24 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.para{
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+p{
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Lato', sans-serif;
+}
