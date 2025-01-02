@@ -1,0 +1,63 @@
+{%extends "layout.html"%}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='about.css')}}">
+{% endblock style %}
+{%block content%}
+  <!-- About Us Section -->
+  <div class="about-section">
+    <h1 class="load-animate">About Us</h1>
+    <p class="load-animate">
+      <i class="fa-solid fa-quote-left quote-icon"></i>
+      At AyuPharma, we're on a mission to revolutionize Ayurveda by seamlessly
+      merging ancient wisdom with cutting-edge technology. In today's
+      fast-paced digital age, where healthcare and holistic well-being are
+      paramount, we stand at the forefront of this transformation.
+      <i class="fa-solid fa-quote-right quote-icon"></i>
+    </p>
+  </div>
+
+  <h2 style="text-align: center">About the Author</h2>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <!-- <img src="/resources/1.jpg" alt="Jane" style="width: 100%" /> -->
+        <div class="container">
+          <h2>Ayush Gupta</h2>
+          <b>~Student, IIIT Sonepat</b>
+          <p class="content">
+            Computer Science student at IIIT Sonepat, passionate about bridging technology and business 💼. Thrives on coding, problem-solving, and building innovative solutions 💡. Strong in Data Structures, Algorithms, and Web Development 🌐📈. Aiming for internships and placement in a product-based company, with future plans for entrepreneurship 🧑‍💼.
+
+          </p>
+          <p>
+            <button class="contact-button primary-button">Contact</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Font Awesome Linking -->
+  <script src="https://kit.fontawesome.com/b88994d2e3.js" crossorigin="anonymous"></script>
+  <!-- Script Files linking -->
+  <script>
+    const contacts = document.getElementsByClassName('contact-button');
+    contacts[0].addEventListener('click', () => {
+      window.location.href = "https://www.linkedin.com/in/ayush-gupta-a5a1ab272/";
+    })
+    contacts[1].addEventListener('click', () => {
+      window.location.href = "https://www.linkedin.com/in/umesh-kr-verma";
+    })
+    contacts[2].addEventListener('click', () => {
+      window.location.href = "https://www.linkedin.com/in/dhruv-verma-ab9aab253";
+    })
+    contacts[3].addEventListener('click', () => {
+      window.location.href = "https://www.linkedin.com/in/v-nikshitha-860655258";
+    })
+    contacts[4].addEventListener('click', () => {
+      window.location.href = "https://www.linkedin.com/in/aditya-kumar-aab952253";
+    })
+    contacts[5].addEventListener('click', () => {
+      window.location.href = "https://www.linkedin.com/in/vedant-singh-749392289";
+    })
+  </script>
+{%endblock content%}
