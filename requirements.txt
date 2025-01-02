@@ -1,7 +1,5 @@
 amqp==5.3.1
 annotated-types==0.7.0
-asgiref==3.8.1
-async==0.6.2
 bcrypt==4.2.1
 billiard==4.2.1
 blinker==1.9.0
@@ -17,17 +15,16 @@ click-repl==0.3.0
 cloudpathlib==0.20.0
 confection==0.1.5
 cymem==2.0.10
-Django==5.1.4
 dnspython==2.7.0
 email_validator==2.2.0
-en_core_web_lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.8.0/en_core_web_lg-3.8.0-py3-none-any.whl#sha256=293e9547a655b25499198ab15a525b05b9407a75f10255e405e8c3854329ab63
+en_core_web_lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.8.0/en_core_web_lg-3.8.0-py3-none-any.whl
 Flask==3.1.0
 Flask-Bcrypt==1.0.1
 Flask-Login==0.6.3
 Flask-SQLAlchemy==3.1.1
 Flask-WTF==1.2.2
+gunicorn==23.0.0
 idna==3.10
-image==1.5.33
 itsdangerous==2.2.0
 Jinja2==3.1.5
 kombu==5.4.2
@@ -40,7 +37,6 @@ mdurl==0.1.2
 murmurhash==1.0.11
 numpy==2.2.1
 packaging==24.2
-pillow==11.1.0
 preshed==3.0.9
 prompt_toolkit==3.0.48
 pydantic==2.10.4
@@ -56,7 +52,6 @@ spacy==3.8.3
 spacy-legacy==3.0.12
 spacy-loggers==1.0.5
 SQLAlchemy==2.0.36
-sqlparse==0.5.3
 srsly==2.5.0
 thinc==8.3.3
 tqdm==4.67.1
