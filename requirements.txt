@@ -1,5 +1,6 @@
 amqp==5.3.1
 annotated-types==0.7.0
+asgiref==3.8.1
 bcrypt==4.2.1
 billiard==4.2.1
 blinker==1.9.0
