@@ -33,7 +33,7 @@
   }
 
   .service-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
     box-shadow: 1px 2px 10px gray;
   }
 
